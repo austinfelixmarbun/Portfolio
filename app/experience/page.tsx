@@ -1,6 +1,6 @@
 "use client";
 
-import { Code2, Rocket } from "lucide-react";
+import { Ship, Code2 } from "lucide-react";
 import { Timeline } from "../components/ui/timeline";
 import { cn } from "../lib/utils";
 import { homePageStyles as hps, timelineStyles as s } from "../styles/styles";
@@ -13,7 +13,7 @@ export default function TimeLine() {
         <div className={s.itemContainer}>
           <div className={s.itemFlexContainer}>
             <div className={s.iconContainerBlue}>
-              <Rocket className={s.iconBlue} />
+              <Ship className={s.iconBlue} />
             </div>
             <div>
               <h3 className={s.contentTitle}>Database Teaching Assistant</h3>
@@ -51,7 +51,7 @@ export default function TimeLine() {
         <div className={s.itemContainer}>
           <div className={s.itemFlexContainer}>
             <div className={s.iconContainerBlue}>
-              <Rocket className={s.iconBlue} />
+              <Ship className={s.iconBlue} />
             </div>
             <div>
               <h3 className={s.contentTitle}>AI Research Assistant</h3>
@@ -90,7 +90,7 @@ export default function TimeLine() {
         <div className={s.itemContainer}>
           <div className={s.itemFlexContainer}>
             <div className={s.iconContainerBlue}>
-              <Rocket className={s.iconBlue} />
+              <Ship className={s.iconBlue} />
             </div>
             <div>
               <h3 className={s.contentTitle}>Full-Stack Developer</h3>
