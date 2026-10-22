@@ -68,7 +68,7 @@ export const projects: Project[] = [
       "Production deployment strategies",
     ],
     links: {
-      visit: "https://github.com/austinfelixmarbun",
+      visit: "https://github.com/austinfelixmarbun/Portfolio",
       github: "https://github.com/austinfelixmarbun",
     },
     author: "Austin",
