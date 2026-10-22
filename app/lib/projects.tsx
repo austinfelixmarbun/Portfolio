@@ -5,6 +5,7 @@ export interface Project {
   detailedDescription: string;
   slug: string;
   image: string;
+  slides?: string[];
   tags: string[];
   status: "active" | "archived";
   links: {
@@ -23,26 +24,34 @@ export interface Project {
   learningOutcomes: string[];
 }
 
-
 export const projects: Project[] = [
   {
     id: "1",
     title: "Tool Lending App",
     slug: "tool-lending-app",
-    description: "development..",
-    detailedDescription:
-      "A modern AI-powered Invoice Generator SaaS Web Application built with the MERN Stack (MongoDB, Express.js, React.js, Node.js) integrated with Gemini AI. This smart invoicing platform generates professional invoices in seconds using AI, manages clients, tracks payments, and provides real-time business insights.",
-    image: "/p1.webp",
-    tags: ["AI", "SaaS", "MERN", "Full-Stack", "Business"],
-    status: "active",
+    description: "Project from PTDI internship",
+    detailedDescription: `A modern Inventory management SaaS Web Application 
+    built with the PostgreSQL, Express.js, React.js, Node.js.`,
+    image: "/project_slides/login_page.png",
+    slides: [
+      "/project_slides/login_page.png",
+      "/project_slides/dashboard_dark.png",
+      "/project_slides/dashboard_light.png",
+      "/project_slides/borrow_dark.png",
+      "/project_slides/inventory_dark.png",
+      "/project_slides/verify_dark.png",
+      "/project_slides/return_dark.png",
+      "/project_slides/user_dark.png"
+    ],
+    tags: ["SaaS", "PERN", "Full-Stack", "Inventory"],
+    status: "archived",
     techStack: [
       "React",
-      "Node.js",
       "Express",
-      "MongoDB",
+      "PostgreSQL",
       "Tailwind CSS",
-      "Gemini AI",
-      "Clerk Auth",
+      "Drizzle ORM",
+      "Docker",
     ],
     features: [
       "AI-powered invoice generation from plain text prompts",
@@ -63,37 +72,27 @@ export const projects: Project[] = [
     links: {
       visit: "projects/tool-lending-app",
       github: "https://github.com/austinfelixmarbun",
-      howIBuilt: "",
+      howIBuilt: "ss",
     },
     author: "Austin",
-    authorAvatar: "/p1.webp",
+    authorAvatar: "/icon.svg",
   },
 ];
 
-/* -------------------------
-   Helper utilities
-   ------------------------- */
-
-/** Return a project by slug or null */
 export function getProjectBySlug(
   slug: string | undefined | null,
 ): Project | null {
-  // defensive normalization: decode URI components, coerce to string, trim
-  const normalized = decodeURIComponent(String(slug ?? "")).trim();
-  if (!normalized) return null;
-  return projects.find((p) => p.slug === normalized) ?? null;
+  return projects.find((p) => p.slug === String(slug ?? "")) ?? null;
 }
-/** Return all slugs (useful for generateStaticParams or getStaticPaths) */
+
 export function getAllProjectSlugs(): string[] {
   return projects.map((p) => p.slug);
 }
 
-/** Compose the canonical URL for a project (useful in UIs) */
 export function getProjectUrl(project: Project | { slug: string }) {
   return `/projects/${project.slug}`;
 }
 
-/** Return all projects (shallow copy) */
 export function getAllProjects(): Project[] {
   return [...projects];
 }

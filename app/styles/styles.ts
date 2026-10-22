@@ -1,7 +1,5 @@
 import type { CSSProperties } from "react";
 
-// assets/dummyStyles.js
-
 export const homePageStyles = {
   // Layout and container styles
   container:
@@ -107,10 +105,7 @@ export const pageStyles = {
   emailIcon: "h-4 w-4",
 };
 
-// assets/dummyStyles.js
-
 export const timelineStyles = {
-  // Layout styles relative z-10 bg-zinc-950b p-6 pt-20 md:pt-16 md:p-20 | min-h-screen bg-zinc-550 p-4 md:p-8 pt-20 lg:pt-20 xl:pt-30
   container: "relative z-10 bg-zinc-950b p-6 pt-20 md:pt-16 md:p-20",
   innerContainer: "relative z-10 mx-auto max-w-5xl",
   mainTitle: "mt-4 text-4xl font-bold text-white md:text-5xl",
@@ -309,8 +304,6 @@ export const contactPageStyles = {
     "text-zinc-300 underline decoration-zinc-700 underline-offset-4 transition-colors hover:text-zinc-100 hover:decoration-zinc-500",
 };
 
-// Add these to assets/dummyStyles.js
-
 export const projectStyles = {
   // Page container
   pageContainer:
@@ -376,12 +369,6 @@ export const projectStyles = {
   titleComponentText: "text-sm font-medium text-zinc-200",
 };
 
-// You can also create a combined styles object if needed
-export const styles = {
-  timeline: timelineStyles,
-  projects: projectStyles,
-};
-
 export const toolsPageStyles = {
   // Layout and container styles
   pageContainer:
@@ -409,8 +396,6 @@ export const toolsPageStyles = {
     "text-base font-medium text-zinc-100 truncate group-hover:text-zinc-50",
   toolCategory: "text-xs text-zinc-500 group-hover:text-zinc-400",
 };
-
-// Add these to assets/dummyStyles.js
 
 export const projectDetailStyles = {
   // Page container
@@ -507,8 +492,6 @@ export const projectDetailStyles = {
   authorName: "text-zinc-300",
   projectInfoText: "text-zinc-300 capitalize",
 };
-
-// Add these to assets/dummyStyles.js
 
 export const sidebarStyles = {
   // Mobile top navbar

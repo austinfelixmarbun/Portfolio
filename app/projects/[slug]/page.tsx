@@ -1,7 +1,7 @@
 import { BackgroundBeams } from "@/app/components/ui/back-beams";
 import { getAllProjectSlugs, getProjectBySlug } from "@/app/lib/projects";
 import { projectDetailStyles as s } from "@/app/styles/styles";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ExternalLink, Youtube, Github, Package } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -30,16 +30,11 @@ export default async function ProjectPage({
             Back to Projects
           </Link>
         </div>
-        {/* <div className={s.projectHeader}>
+        <div className={s.projectHeader}>
           <div className={s.headerFlex}>
             <div className={s.headerLeft}>
               <div className={s.titleContainer}>
                 <h1 className={s.projectTitle}>{project.title}</h1>
-                <span
-                  className={`${s.statusBadge}${project.status === "active" ? s.statusActive : s.statusInactive}`}
-                >
-                  {project.status}
-                </span>
               </div>
               <p className={s.projectDescription}>{project.description}</p>
               <div className={s.tagsContainer}>
@@ -62,18 +57,7 @@ export default async function ProjectPage({
                   className={s.visitButton}
                 >
                   <ExternalLink className={s.buttonIcon} />
-                  Visit Live
-                </Link>
-              )}
-              {project.links.howIBuilt && (
-                <Link
-                  href={project.links.howIBuilt}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={s.buttonIcon}
-                >
-                  <Youtube className={s.buttonIcon} />
-                  How I Build
+                  Github
                 </Link>
               )}
             </div>
@@ -121,57 +105,8 @@ export default async function ProjectPage({
                   <span
                     key={tech}
                     className={s.techStackItem}
-                  ></span>
+                  >{tech}</span>
                 ))}
-              </div>
-            </section>
-            <section>
-              <h3 className={s.sidebarSectionTitle}>Projects Links</h3>
-              <div className={s.linksContainer}>
-                {project.links.github && (
-                  <a
-                    href={project.links.github}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    className={s.linkCard}
-                  >
-                    <Github className={s.linkIcon} />
-                    <span className={s.linkText}>View Source Code</span>
-                  </a>
-                )}
-                {project.links.visit && (
-                  <a
-                    href={project.links.visit}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    className={s.linkCard}
-                  >
-                    <ExternalLink className={s.linkIcon} />
-                    <span className={s.linkText}>Live Demo</span>
-                  </a>
-                )}
-                {project.links.pypi && (
-                  <a
-                    href={project.links.pypi}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    className={s.linkCard}
-                  >
-                    <Package className={s.linkIcon} />
-                    <span className={s.linkText}>Pypi Package</span>
-                  </a>
-                )}
-                {project.links.youtube && (
-                  <a
-                    href={project.links.youtube}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    className={s.linkCard}
-                  >
-                    <Youtube className={s.linkIcon} />
-                    <span className={s.linkText}>Video Tutorial</span>
-                  </a>
-                )}
               </div>
             </section>
             <section className={s.sidebarSection}>
@@ -199,14 +134,6 @@ export default async function ProjectPage({
               </div>
             </section>
           </div>
-        </div> */}
-        <div className="flex flex-col items-center justify-center min-h-[50vh] text-center space-y-4">
-          <h1 className="text-3xl md:text-5xl font-bold text-zinc-100">
-            {project.title}
-          </h1>
-          <p className="text-xl text-zinc-400 font-medium animate-pulse">
-            In development...
-          </p>
         </div>
       </div>
       <BackgroundBeams />

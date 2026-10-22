@@ -79,7 +79,7 @@ export default function Home(): React.ReactElement {
             >
               <em>Indonesian Aerospace Company</em>
             </a>{" "}
-            for Detail Part Manufacturing Division. Check for the demo{" "}
+            for Detail Part Manufacturing Division. Check for the project{" "}
             <a
               className={hps.link}
               href="/projects"
