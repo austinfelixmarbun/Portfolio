@@ -15,7 +15,6 @@ export interface Project {
     link?: string;
     youtube?: string;
     archive?: string;
-    howIBuilt?: string;
   };
   author: string;
   authorAvatar: string;
@@ -62,17 +61,15 @@ export const projects: Project[] = [
       "Business insights and analytics",
     ],
     learningOutcomes: [
-      "Full-stack SaaS application development with MERN",
-      "Gemini AI integration for intelligent automation",
+      "Full-stack SaaS application development with PERN",
       "Secure authentication and user management",
       "RESTful API design with Express.js",
-      "Database modeling with MongoDB schemas",
+      "Database schemas modeling with Drizzle ORM",
       "Production deployment strategies",
     ],
     links: {
       visit: "projects/tool-lending-app",
       github: "https://github.com/austinfelixmarbun",
-      howIBuilt: "ss",
     },
     author: "Austin",
     authorAvatar: "/icon.svg",
