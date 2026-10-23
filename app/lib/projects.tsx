@@ -5,7 +5,7 @@ export interface Project {
   detailedDescription: string;
   slug: string;
   image: string;
-  slides?: string[];
+  images: string[];
   tags: string[];
   links: {
     visit?: string;
@@ -36,7 +36,7 @@ export const projects: Project[] = [
       verifying, and returning industrial tools, using a PostgreSQL, Express.js, 
       React, and Node.js (PERN) stack in a containerized monorepo.`,
     image: "/project_slides/login_page.png",
-    slides: [
+    images: [
       "/project_slides/login_page.png",
       "/project_slides/dashboard_dark.png",
       "/project_slides/dashboard_light.png",

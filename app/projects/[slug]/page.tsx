@@ -5,11 +5,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { homePageStyles as hps } from "../../styles/styles"
 import { cn } from "@/app/lib/utils";
+import ImageSlider from "./slider"
 
 interface ProjectPageProps {
   params: Promise<{ slug: string }>;
 }
-
 
 export default async function ProjectPage({
   params,
@@ -69,10 +69,9 @@ export default async function ProjectPage({
           </div>
         </div>
         <div className={s.imageContainer}>
-          <img
-            src={project.image}
-            alt={project.title}
-            className={s.projectImage}
+          <ImageSlider
+          images={project.images}
+          title={project.title}
           />
         </div>
         <div className={s.gridContainer}>
