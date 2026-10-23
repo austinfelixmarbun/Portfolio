@@ -404,6 +404,7 @@ export const projectDetailStyles = {
   innerContainer: "max-w-6xl mx-auto relative z-10",
 
   // Back button
+  backButtonContainer: "mb-8 pl-1 inline-block p-4 rounded-xl cursor-pointer font-bold",
   backButton:
     "inline-flex items-center gap-2 text-zinc-400 hover:text-zinc-300 transition-colors",
   backIcon: "h-4 w-4",
@@ -465,14 +466,14 @@ export const projectDetailStyles = {
   // Learning outcomes
   learningOutcomesGrid: "grid grid-cols-1 sm:grid-cols-2 gap-3",
   learningOutcomeCard:
-    "flex items-center gap-3 rounded-lg border border-zinc-800 bg-zinc-900/30 p-3",
+    "flex items-center gap-3 rounded-lg border border-zinc-800 bg-zinc-900 p-3",
   learningOutcomeNumber:
     "flex h-6 w-6 items-center justify-center rounded-full bg-green-500/10",
   learningOutcomeNumberText: "text-xs font-medium text-green-400",
   learningOutcomeText: "text-sm text-zinc-400",
 
   // Sidebar sections
-  sidebarSection: "rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6",
+  sidebarSection: "mt-20 rounded-2xl border border-zinc-800 bg-zinc-900 p-6",
   techStackContainer: "flex flex-wrap gap-2",
   techStackItem:
     "rounded-md bg-zinc-800 px-3 py-1.5 text-sm font-medium text-zinc-300",
@@ -485,7 +486,7 @@ export const projectDetailStyles = {
   linkText: "text-zinc-300",
 
   // Project info
-  projectInfoContainer: "space-y-4",
+  projectInfoContainer: "space-y-5",
   projectInfoLabel: "text-sm text-zinc-500 mb-1",
   authorContainer: "flex items-center gap-3",
   authorAvatar: "h-8 w-8 rounded-full border border-zinc-700",

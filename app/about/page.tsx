@@ -19,7 +19,6 @@ export default function AboutPage() {
     "Node.js",
     "Express",
     "Postgres",
-    "MongoDB",
     "Tailwind",
     "Python",
     "PyTorch",

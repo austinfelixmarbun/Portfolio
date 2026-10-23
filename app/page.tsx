@@ -54,14 +54,13 @@ export default function Home(): React.ReactElement {
                     aria-hidden
                   ></svg>
                   <div className={hps.calloutCard.text}>
-                    Connect with me on Linkedin
+                    Connect with me on Github
                   </div>
                 </div>
                 <a
-                  href="https://linkedin.com/in/austin-felix-marbun"
+                  href="https://github.com/austinfelixmarbun"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Follow on Linkedin"
                   className={hps.calloutCard.button}
                 >
                   Follow

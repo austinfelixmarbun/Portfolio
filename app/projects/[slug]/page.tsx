@@ -1,13 +1,15 @@
-import { BackgroundBeams } from "@/app/components/ui/back-beams";
 import { getAllProjectSlugs, getProjectBySlug } from "@/app/lib/projects";
 import { projectDetailStyles as s } from "@/app/styles/styles";
-import { ArrowLeft, ExternalLink, Youtube, Github, Package } from "lucide-react";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { homePageStyles as hps } from "../../styles/styles"
+import { cn } from "@/app/lib/utils";
 
 interface ProjectPageProps {
   params: Promise<{ slug: string }>;
 }
+
 
 export default async function ProjectPage({
   params,
@@ -20,8 +22,11 @@ export default async function ProjectPage({
 
   return (
     <div className={s.pageContainer}>
+      <div
+        className={cn(hps.backgroundGrid.wrapper, hps.backgroundGrid.pattern)}
+      />
       <div className={s.innerContainer}>
-        <div className="mb-8">
+          <div className={s.backButtonContainer}>
           <Link
             href="/projects"
             className={s.backButton}
@@ -68,7 +73,7 @@ export default async function ProjectPage({
             src={project.image}
             alt={project.title}
             className={s.projectImage}
-          ></img>
+          />
         </div>
         <div className={s.gridContainer}>
           <div className={s.mainContent}>
@@ -105,7 +110,9 @@ export default async function ProjectPage({
                   <span
                     key={tech}
                     className={s.techStackItem}
-                  >{tech}</span>
+                  >
+                    {tech}
+                  </span>
                 ))}
               </div>
             </section>
@@ -124,19 +131,14 @@ export default async function ProjectPage({
                   </div>
                 </div>
                 <div>
-                  <p className={s.projectInfoLabel}>Status</p>
-                  <p className={s.projectInfoText}>{project.status}</p>
-                </div>
-                <div>
                   <p className={s.projectInfoLabel}>Category</p>
-                  <p className={s.projectInfoText}>{project.tags[0]}</p>
+                  <p className={s.projectInfoText}>{project.category}</p>
                 </div>
               </div>
             </section>
           </div>
         </div>
       </div>
-      <BackgroundBeams />
     </div>
   );
 }

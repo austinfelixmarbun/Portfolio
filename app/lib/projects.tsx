@@ -7,7 +7,6 @@ export interface Project {
   image: string;
   slides?: string[];
   tags: string[];
-  status: "active" | "archived";
   links: {
     visit?: string;
     github?: string;
@@ -21,6 +20,7 @@ export interface Project {
   techStack: string[];
   features: string[];
   learningOutcomes: string[];
+  category: string;
 }
 
 export const projects: Project[] = [
@@ -28,9 +28,13 @@ export const projects: Project[] = [
     id: "1",
     title: "Tool Lending App",
     slug: "tool-lending-app",
-    description: "Project from PTDI internship",
-    detailedDescription: `A modern Inventory management SaaS Web Application 
-    built with the PostgreSQL, Express.js, React.js, Node.js.`,
+    description: `Inventory and tool lending system that digitized 150,000 industrial tools 
+      at PT Dirgantara Indonesia`,
+    detailedDescription: `A full-stack inventory management web application 
+      built during my internship at PT Dirgantara Indonesia (Indonesian Aerospace). 
+      It replaces paper-based inventory cards with a digital workflow for borrowing, 
+      verifying, and returning industrial tools, using a PostgreSQL, Express.js, 
+      React, and Node.js (PERN) stack in a containerized monorepo.`,
     image: "/project_slides/login_page.png",
     slides: [
       "/project_slides/login_page.png",
@@ -40,39 +44,41 @@ export const projects: Project[] = [
       "/project_slides/inventory_dark.png",
       "/project_slides/verify_dark.png",
       "/project_slides/return_dark.png",
-      "/project_slides/user_dark.png"
+      "/project_slides/user_dark.png",
     ],
-    tags: ["SaaS", "PERN", "Full-Stack", "Inventory"],
-    status: "archived",
+    tags: ["PERN", "Full-Stack", "Inventory", "Docker"],
     techStack: [
       "React",
+      "Node.js",
       "Express",
       "PostgreSQL",
-      "Tailwind CSS",
       "Drizzle ORM",
-      "Docker",
+      "Tailwind CSS",
+      "Docker Compose",
     ],
     features: [
-      "AI-powered invoice generation from plain text prompts",
-      "Secure user authentication with Clerk",
-      "Client and invoice management dashboard",
-      "Real-time payment tracking (Paid/Unpaid/Overdue)",
-      "Professional invoice templates",
-      "Business insights and analytics",
+      "Digitized inventory of 150,000 industrial tools, with 100,000+ physical inventory cards migrated to PostgreSQL",
+      "Barcode-based real-time tool tracking",
+      "End-to-end borrow, verify, and return workflow",
+      "Fast/slow-moving item categorization for procurement insights",
+      "Dashboard with dark and light themes",
+      "User management and secure login",
+      "Eliminated an estimated Rp 6.5M/year in procurement costs",
     ],
     learningOutcomes: [
-      "Full-stack SaaS application development with PERN",
-      "Secure authentication and user management",
-      "RESTful API design with Express.js",
-      "Database schemas modeling with Drizzle ORM",
-      "Production deployment strategies",
+      "Building a full-stack PERN application for a real enterprise use case",
+      "Designing and migrating relational schemas with PostgreSQL and Drizzle ORM",
+      "Designing RESTful APIs with Express.js",
+      "Containerizing a monorepo with Docker Compose",
+      "Translating paper-based operational workflows into software",
     ],
     links: {
-      visit: "https://github.com/austinfelixmarbun/Portfolio",
+      visit: "/projects/tool-lending-app",
       github: "https://github.com/austinfelixmarbun",
     },
     author: "Austin",
     authorAvatar: "/icon.svg",
+    category: "Web Application",
   },
 ];
 
