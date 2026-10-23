@@ -8,8 +8,18 @@ import { PointerHighlight } from "./components/ui/pointer";
 import { Spotlight } from "./components/ui/Spotlight";
 import { cn } from "./lib/utils";
 import { homePageStyles as hps, spotlightStyles as ss } from "./styles/styles";
+import { useState, useEffect } from "react"
 
 export default function Home(): React.ReactElement {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return <div className="h-32 w-full rounded-2xl bg-white/5" />;
+  }
   return (
     <div className={hps.container}>
       <div

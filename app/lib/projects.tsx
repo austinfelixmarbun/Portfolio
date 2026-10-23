@@ -8,7 +8,6 @@ export interface Project {
   images: string[];
   tags: string[];
   links: {
-    visit?: string;
     github?: string;
     pypi?: string;
     link?: string;
@@ -73,8 +72,7 @@ export const projects: Project[] = [
       "Translating paper-based operational workflows into software",
     ],
     links: {
-      visit: "/projects/tool-lending-app",
-      github: "https://github.com/austinfelixmarbun",
+      github: "https://github.com/austinfelixmarbun/Tool-Crib",
     },
     author: "Austin",
     authorAvatar: "/icon.svg",

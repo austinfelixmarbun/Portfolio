@@ -54,9 +54,9 @@ export default async function ProjectPage({
               </div>
             </div>
             <div className={s.actionButtonsContainer}>
-              {project.links.visit && (
+              {project.links.github && (
                 <Link
-                  href={project.links.visit}
+                  href={project.links.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={s.visitButton}
