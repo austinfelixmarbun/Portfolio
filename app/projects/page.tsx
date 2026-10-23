@@ -87,18 +87,6 @@ function ProjectCard({ project }: { project: Project }) {
         </div>
         <div className={s.actionsContainer}>
           <div className={s.actionsLinksContainer}>
-            {project.links.visit && (
-              <a
-                href={project.links.visit}
-                onClick={(e) => e.stopPropagation()}
-                target="_self"
-                rel="noopener noreferrer"
-                className={s.visitButton}
-                style={{cursor: "none"}}
-              >
-                Visit
-              </a>
-            )}
             {project.links.github && (
               <a
                 href={project.links.github}
@@ -106,7 +94,7 @@ function ProjectCard({ project }: { project: Project }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={s.otherButton}
-                style={{cursor: "none"}}
+                style={{ cursor: "none" }}
               >
                 GitHub
               </a>
