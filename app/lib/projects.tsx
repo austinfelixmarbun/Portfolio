@@ -9,10 +9,7 @@ export interface Project {
   tags: string[];
   links: {
     github?: string;
-    pypi?: string;
-    link?: string;
-    youtube?: string;
-    archive?: string;
+    live?: string;
   };
   author: string;
   authorAvatar: string;
@@ -73,6 +70,7 @@ export const projects: Project[] = [
     ],
     links: {
       github: "https://github.com/austinfelixmarbun/Tool-Crib",
+      live: "https://tool-crib-ptdi.vercel.app/",
     },
     author: "Austin",
     authorAvatar: "/icon.svg",

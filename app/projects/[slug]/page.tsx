@@ -54,12 +54,23 @@ export default async function ProjectPage({
               </div>
             </div>
             <div className={s.actionButtonsContainer}>
+              {project.links.live && (
+                <Link
+                  href={project.links.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={s.visitLiveButton}
+                >
+                  <ExternalLink className={s.buttonIcon} />
+                  Live Demo
+                </Link>
+              )}
               {project.links.github && (
                 <Link
                   href={project.links.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={s.visitButton}
+                  className={s.visitGithubButton}
                 >
                   <ExternalLink className={s.buttonIcon} />
                   Github
