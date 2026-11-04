@@ -99,33 +99,6 @@ function ProjectCard({ project }: { project: Project }) {
                 GitHub
               </a>
             )}
-            {project.links.pypi && (
-              <a
-                href={project.links.pypi}
-                onClick={(e) => e.stopPropagation()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={s.otherButton}
-              >
-                PyPI
-              </a>
-            )}
-            {project.links.link && (
-              <a
-                href={project.links.link}
-                onClick={(e) => e.stopPropagation()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={s.otherButton}
-              >
-                Link
-              </a>
-            )}
-          </div>
-          <div className="flex gap-1">
-            {project.links.archive && (
-              <span className={s.archivedText}>Archived</span>
-            )}
           </div>
         </div>
       </div>
